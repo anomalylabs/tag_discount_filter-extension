@@ -4,7 +4,7 @@ use Anomaly\ConfigurationModule\Configuration\Contract\ConfigurationRepositoryIn
 use Anomaly\DiscountsModule\Discount\Contract\DiscountInterface;
 use Anomaly\DiscountsModule\Filter\Contract\FilterInterface;
 use Anomaly\DiscountsModule\Filter\Extension\Contract\FilterExtensionInterface;
-use Illuminate\Contracts\Bus\SelfHandling;
+
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Translation\Translator;
 
@@ -16,7 +16,7 @@ use Illuminate\Translation\Translator;
  * @author        Ryan Thompson <ryan@pyrocms.com>
  * @package       Anomaly\TagDiscountFilterExtension\Command
  */
-class GetColumnValue implements SelfHandling
+class GetColumnValue
 {
 
     /**
