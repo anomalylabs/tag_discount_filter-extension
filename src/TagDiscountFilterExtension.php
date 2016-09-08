@@ -1,11 +1,11 @@
 <?php namespace Anomaly\TagDiscountFilterExtension;
 
-use Anomaly\TagDiscountFilterExtension\Command\GetColumnValue;
-use Anomaly\TagDiscountFilterExtension\Command\GetFormBuilder;
 use Anomaly\DiscountsModule\Discount\Contract\DiscountInterface;
 use Anomaly\DiscountsModule\Filter\Contract\FilterInterface;
 use Anomaly\DiscountsModule\Filter\Extension\FilterExtension;
 use Anomaly\DiscountsModule\Filter\Extension\Form\FilterExtensionFormBuilder;
+use Anomaly\TagDiscountFilterExtension\Command\GetColumnValue;
+use Anomaly\TagDiscountFilterExtension\Command\GetFormBuilder;
 
 /**
  * Class TagDiscountFilterExtension

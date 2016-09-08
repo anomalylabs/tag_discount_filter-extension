@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'filter' => 'Product <em>:operator</em> <strong>:value</strong> tag'
+    'filter' => 'Product <em>:operator</em> <strong>:value</strong> tag',
 ];

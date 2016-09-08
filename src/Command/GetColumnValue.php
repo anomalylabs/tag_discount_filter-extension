@@ -4,8 +4,6 @@ use Anomaly\ConfigurationModule\Configuration\Contract\ConfigurationRepositoryIn
 use Anomaly\DiscountsModule\Discount\Contract\DiscountInterface;
 use Anomaly\DiscountsModule\Filter\Contract\FilterInterface;
 use Anomaly\DiscountsModule\Filter\Extension\Contract\FilterExtensionInterface;
-
-use Illuminate\Contracts\Config\Repository;
 use Illuminate\Translation\Translator;
 
 /**
