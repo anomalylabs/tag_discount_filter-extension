@@ -85,14 +85,12 @@ class GetFormBuilder
         );
 
         if ($this->filter) {
-            $configuration->setScope('discount_' . $this->discount->getId() . '_' . $this->filter->getId());
+            $configuration->setScope($this->filter->getId());
         } else {
             $builder->on(
                 'saved_filter',
                 function () use ($filter, $configuration) {
-                    $configuration->setScope(
-                        'discount_' . $this->discount->getId() . '_' . $filter->getFormEntryId()
-                    );
+                    $configuration->setScope($filter->getFormEntryId());
                 }
             );
         }
