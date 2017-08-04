@@ -3,7 +3,7 @@
 use Anomaly\ConfigurationModule\Configuration\Contract\ConfigurationRepositoryInterface;
 use Anomaly\DiscountsModule\Discount\Contract\DiscountInterface;
 use Anomaly\DiscountsModule\Filter\Contract\FilterInterface;
-use Anomaly\DiscountsModule\Filter\Extension\Contract\FilterExtensionInterface;
+use Anomaly\DiscountsModule\Filter\Extension\FilterExtension;
 use Illuminate\Translation\Translator;
 
 /**
@@ -34,19 +34,19 @@ class GetColumnValue
     /**
      * The filter extension.
      *
-     * @var FilterExtensionInterface
+     * @var FilterExtension
      */
     protected $extension;
 
     /**
      * Create a new GetColumnValue instance.
      *
-     * @param FilterExtensionInterface $extension
+     * @param FilterExtension $extension
      * @param DiscountInterface        $discount
      * @param FilterInterface          $filter
      */
     public function __construct(
-        FilterExtensionInterface $extension,
+        FilterExtension $extension,
         DiscountInterface $discount,
         FilterInterface $filter = null
     ) {
