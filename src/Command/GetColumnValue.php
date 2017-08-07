@@ -62,10 +62,12 @@ class GetColumnValue
      */
     public function handle(Translator $translator, ConfigurationRepositoryInterface $configuration)
     {
-        $scope = 'discount_' . $this->discount->getId() . '_' . $this->filter->getId();
+        $operator = $configuration->presenter(
+            'anomaly.extension.tag_discount_filter::operator',
+            $this->filter->getId()
+        )->value;
 
-        $operator = $configuration->presenter('anomaly.extension.tag_discount_filter::operator', $scope)->value;
-        $value    = $configuration->value('anomaly.extension.tag_discount_filter::value', $scope);
+        $value = $configuration->value('anomaly.extension.tag_discount_filter::value', $this->filter->getId());
 
         return $translator->trans(
             'anomaly.extension.tag_discount_filter::message.filter',
